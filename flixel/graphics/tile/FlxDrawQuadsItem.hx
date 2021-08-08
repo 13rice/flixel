@@ -120,11 +120,8 @@ class FlxDrawQuadsItem extends FlxDrawBaseItem<FlxDrawQuadsItem>
 		shader.bitmap.filter = (camera.antialiasing || antialiasing) ? LINEAR : NEAREST;
 		shader.alpha.value = alphas;
 
-		if (colored || hasColorOffsets)
-		{
-			shader.colorMultiplier.value = colorMultipliers;
-			shader.colorOffset.value = colorOffsets;
-		}
+		shader.colorMultiplier.value = colorMultipliers;
+		shader.colorOffset.value = colorOffsets;
 
 		setParameterValue(shader.hasTransform, true);
 		setParameterValue(shader.hasColorTransform, colored || hasColorOffsets);
